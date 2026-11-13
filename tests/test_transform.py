@@ -77,4 +77,5 @@ def test_all_orders_are_completed(tmp_path):
         reader = csv.DictReader(file)
         records = list(reader)
 
+    assert len(records) > 0
     assert all(row["status"] == "COMPLETED" for row in records)
