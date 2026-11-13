@@ -1,3 +1,4 @@
+
 import csv
 import os
 
@@ -20,7 +21,8 @@ def transform_sales(input_file, output_file):
 
     # Write transformed data into output CSV
     with open(output_file, mode="w", newline="") as file:
-        fieldnames = ["order_id", "amount", "status"]
+        fieldnames = ["order_id", "amount", "status", "discount"]
+
         writer = csv.DictWriter(file, fieldnames=fieldnames)
 
         writer.writeheader()
